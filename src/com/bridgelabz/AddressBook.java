@@ -10,8 +10,8 @@ import java.util.Scanner;
  * @author Iam_A
  *
  */
- /*UC
-  * Ability to Delete contact person using their name
+ /*UC-6
+  * Refactor to add multiple Address Book to the System. Each Address Book has a unique Name - Use Console to add new Address Book
  */
 public class AddressBook {
 	 
