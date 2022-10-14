@@ -76,9 +76,26 @@ public class AddressBookMain {
 		for(int i=0;i<addressBookList.size();i++) {
 			addressBookList.get(i).displayAddressBook();
 		}
+
+		//Display person within the city
+		System.out.println("\nEnter city name to find person");
+		String cityName = input.next();	
+		System.out.println("Display person within the city");
+		for(int i=0;i<addressBookList.size();i++) {
+			addressBookList.get(i).displayPersonInCity(cityName);
+		}
 		
-		
+		//Display person within the state
+		System.out.println("\nEnter state to find person");
+		String stateName = input.next();		
+		System.out.println("Display person within the state");
+		for(int i=0;i<addressBookList.size();i++) {
+			addressBookList.get(i).displayPersonInState(stateName);
+		}
 		input.close();
 	}
+		
+		
+	}
 	
-}
+
