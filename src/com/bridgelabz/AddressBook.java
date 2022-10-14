@@ -4,6 +4,8 @@
 package com.bridgelabz;
 
 import java.util.ArrayList;
+import java.util.Dictionary;
+import java.util.Hashtable;
 import java.util.Scanner;
 
 /**
@@ -85,6 +87,13 @@ public class AddressBook {
 			System.out.println("No record found with given name");
 		}
 	}	
+	public void displayAddressBook() {
+		System.out.println("Displaying all contacts from address book");
+		for(int i=0; i < contactList.size(); i++) {
+			contactList.get(i).displaData();
+			
+		}
+	}
 	public void deleteContact() {
 		
 		System.out.println("\nEnter name of person to delete contact");
@@ -96,39 +105,33 @@ public class AddressBook {
 			}
 		}
 		}
-	
-
-	public void displayAddressBook() {
-		System.out.println("Displaying all contacts from address book");
-		for(int i=0; i < contactList.size(); i++) {
-			contactList.get(i).displaData();
-		}
-	}
-	
+	Dictionary<String, String> cityPerson = new Hashtable<String, String>(); 
 	public void displayPersonInCity(String cityName) {
-		int found=0;
 		for(int i=0; i <contactList.size(); i++) {	
 			if(contactList.get(i).city.equalsIgnoreCase(cityName)) {
-				found=1;
-				System.out.println("Person Name : "+contactList.get(i).firstName + " "+contactList.get(i).lastName);
+				cityPerson.put(cityName, contactList.get(i).firstName);				
 			}
 		}
-		if(found==0) {
-			System.out.println("No person found in given city");
-		}
+		System.out.println(cityPerson);
 	}
 	
 	//Search for person in state
+	Dictionary<String, String> statePerson = new Hashtable<String, String>(); 
 	public void displayPersonInState(String stateName) {
-		int found=0;
+	
 		for(int i=0; i <contactList.size(); i++) {	
 			if(contactList.get(i).state.equalsIgnoreCase(stateName)) {
-				found=1;
-				System.out.println("Person Name : "+contactList.get(i).firstName + " "+contactList.get(i).lastName);
+				statePerson.put(stateName, contactList.get(i).firstName);
 			}
 		}
-
+		System.out.println(statePerson);
 	}
+
+	
+	
+	
+	
+	
 }
 
 
