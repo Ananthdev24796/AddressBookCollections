@@ -12,8 +12,8 @@ import java.util.Scanner;
  * @author Iam_A
  *
  */
- /*UC-8
-  *Ability to search Person in a City or State across the multiple AddressBook
+ /*UC-10
+  *Ability to get number of contact persons i.e. count by City or State
  */
 public class AddressBook {
 	 
@@ -112,7 +112,7 @@ public class AddressBook {
 				cityPerson.put(cityName, contactList.get(i).firstName);				
 			}
 		}
-		System.out.println(cityPerson);
+		System.out.println("Number of contacts with city "+cityName+" : "+cityPerson.size()+"\n"+cityPerson);
 	}
 	
 	//Search for person in state
@@ -124,7 +124,7 @@ public class AddressBook {
 				statePerson.put(stateName, contactList.get(i).firstName);
 			}
 		}
-		System.out.println(statePerson);
+		System.out.println("Number of contacts with state "+stateName+" : "+statePerson.size()+"\n"+statePerson);
 	}
 
 	
