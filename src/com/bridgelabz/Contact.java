@@ -15,8 +15,8 @@ public class Contact {
 	String city;
 	String state;
 	String zip;
-	String phoneNumber;
-	String emailId;
+	String phoneNo;
+	String email;
 	public Contact(String firstName, String lastName, String address, String city, String state, String zip,
 			String phoneNumber, String emailId) {
 		super();
@@ -26,8 +26,8 @@ public class Contact {
 		this.city = city;
 		this.state = state;
 		this.zip = zip;
-		this.phoneNumber = phoneNumber;
-		this.emailId = emailId;
+		this.phoneNo = phoneNumber;
+		this.email = emailId;
 	}	
 	public void displaData() {
 		System.out.println("\nFirst Name : "+firstName);
@@ -36,8 +36,8 @@ public class Contact {
 		System.out.println("City : "+city);
 		System.out.println("State : "+state);
 		System.out.println("Zip : "+zip);
-		System.out.println("Phone Number : "+phoneNumber);
-		System.out.println("Email Id : "+emailId);
+		System.out.println("Phone Number : "+phoneNo);
+		System.out.println("Email Id : "+email);
 	}
 
 }
