@@ -10,8 +10,8 @@ import java.util.Scanner;
  * @author Iam_A
  *
  */
- /*UC-6
-  * Refactor to add multiple Address Book to the System. Each Address Book has a unique Name - Use Console to add new Address Book
+ /*UC-7
+  * Ability to ensure there is no Duplicate Entry of the same Person in a particular Address Book
  */
 public class AddressBook {
 	 
@@ -46,7 +46,23 @@ public class AddressBook {
 		System.out.print("Enter email :  ");
 		email1 = input.nextLine();
 		Contact contactPerson = new Contact(firstName1, lastName1, address1, city1, state1, zip1, phoneNo1, email1);
-		contactList.add(contactPerson);
+		if(contactList.isEmpty()) {
+			contactList.add(contactPerson);
+		}
+		else {
+			for(int i=0;i<contactList.size();i++) {
+				if(contactList.get(i).firstName.equals(firstName1)&&contactList.get(i).lastName.equals(lastName1)) {
+					System.out.println("Contact already Exist");
+					break;
+					
+				}
+				else {
+					contactList.add(contactPerson);
+					
+				}
+			}
+		}
+		
 		index++;
 	}
 	public void editPersonName() {
