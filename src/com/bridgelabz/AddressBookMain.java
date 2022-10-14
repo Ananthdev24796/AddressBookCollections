@@ -44,9 +44,10 @@ public class AddressBookMain {
 		System.out.print("Enter email :  ");
 		email = input.nextLine();		
 		
-		AddressBook addressBookObj1 = new AddressBook(firstName, lastName, address, city, state, zip,
-				 phoneNo, email);
-		addressBookObj1.displaData();
+		Contact contactPerson = new Contact(firstName, lastName, address, city, state, zip, phoneNo, email);
+		contactPerson.displaData();
+		AddressBook addressBook = new AddressBook();
+		addressBook.addContacts(contactPerson);
 		
 		input.close();
 
