@@ -32,9 +32,12 @@ public class AddressBookMain {
                 case 3:
                 	addressBook1.displayAddressBook();
                 	break;
+               	case 4:
+                    	addressBook1.deleteContact();
+                    	break;
             }
             
-            System.out.println("Press 0 to exit \nPress 1 to add more contact \nPress 2 to edit contact \nPress 3 to display");
+            System.out.println("Press 0 to exit \nPress 1 to add more contact \nPress 2 to edit contact \nPress 3 to display \nPress 4 to delete");
             choice = input.nextInt();
         }
 		

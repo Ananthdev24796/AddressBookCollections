@@ -10,42 +10,42 @@ import java.util.Scanner;
  * @author Iam_A
  *
  */
- /*UC3
-  * Ability to edit existing contact person using their name
+ /*UC
+  * Ability to Delete contact person using their name
  */
 public class AddressBook {
 	 
 	ArrayList<Contact> contactList = new ArrayList<Contact>();
 	static int index=0;
 	Scanner input = new Scanner(System.in);
-	String firstName;
-	String lastName;
-	String address;
-	String city;
-	String state;
-	String zip;
-	String phoneNo;
-	String email;
+	String firstName1;
+	String lastName1;
+	String address1;
+	String city1;
+	String state1;
+	String zip1;
+	String phoneNo1;
+	String email1;
 	
 	public void addContacts() {
 		System.out.println("Welcome to Address Book");
 		System.out.print("Enter first name : ");
-		firstName = input.nextLine();
+		firstName1 = input.nextLine();
 		System.out.print("Enter last name :  ");
-		lastName = input.nextLine();
+		lastName1 = input.nextLine();
 		System.out.print("Enter address :  ");
-		address = input.nextLine();
+		address1 = input.nextLine();
 		System.out.print("Enter state :  ");
-		state = input.nextLine();
+		state1 = input.nextLine();
 		System.out.print("Enter city :  ");
-		city = input.nextLine();
+		city1 = input.nextLine();
 		System.out.print("Enter zip :  ");
-		zip = input.nextLine();
+		zip1 = input.nextLine();
 		System.out.print("Enter phoneNo :  ");
-		phoneNo = input.nextLine();
+		phoneNo1 = input.nextLine();
 		System.out.print("Enter email :  ");
-		email = input.nextLine();
-		Contact contactPerson = new Contact(firstName, lastName, address, city, state, zip, phoneNo, email);
+		email1 = input.nextLine();
+		Contact contactPerson = new Contact(firstName1, lastName1, address1, city1, state1, zip1, phoneNo1, email1);
 		contactList.add(contactPerson);
 		index++;
 	}
@@ -69,9 +69,22 @@ public class AddressBook {
 			System.out.println("No record found with given name");
 		}
 	}	
+	public void deleteContact() {
+		
+		System.out.println("\nEnter name of person to delete contact");
+		String name = input.nextLine();
+		for(int i=0; i <contactList.size(); i++) {	
+			if(contactList.get(i).firstName.equals(name)) {
+				contactList.remove(i);
+				break;
+			}
+		}
+		}
+	
+
 	public void displayAddressBook() {
 		System.out.println("Displaying all contacts from address book");
-		for(int i=0; i < index; i++) {
+		for(int i=0; i < contactList.size(); i++) {
 			contactList.get(i).displaData();
 		}
 	}
