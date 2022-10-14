@@ -10,8 +10,8 @@ import java.util.Scanner;
  * @author Iam_A
  *
  */
- /*UC
-  * Ability to Delete contact person using their name
+ /*UC-5
+  * Ability to add multiple person to Address Book
  */
 public class AddressBook {
 	 
